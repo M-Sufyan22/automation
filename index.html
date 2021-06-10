@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automate your E-commerce store - AutomationApp</title>
+    <meta name="theme-color" content="#4b5db5" />
+    <!-- Fav icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://automation.app/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="https://automation.app/img/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://automation.app/img/favicon/favicon-16x16.png" />
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/css.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body class="general-layout">
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="header">
+        <a class="navbar-brand" href="https://automation.app">
+            <svg height="45" viewBox="0 0 345 366" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M126.249 244.15a13.413 13.413 0 003.435-.866c20.848-8.273 37.234-24.175 46.128-44.77 8.892-20.603 9.237-43.43.96-64.283l-32.21-81.171c-8.276-20.854-24.175-37.236-44.776-46.13-20.602-8.895-43.425-9.24-64.282-.96-6.913 2.744-10.297 10.578-7.548 17.496 2.74 6.915 10.563 10.294 17.489 7.552 14.159-5.624 29.666-5.393 43.66.653C103.094 37.71 113.889 48.838 119.51 63l32.217 81.167c5.62 14.17 5.386 29.67-.654 43.667-6.043 13.982-17.164 24.782-31.326 30.404-6.922 2.74-10.3 10.576-7.563 17.494 2.305 5.788 8.16 9.099 14.066 8.419"
+                            fill="#BFDAF9"></path>
+                            <path d="M345 193.5c0 95.277-77.215 172.5-172.484 172.5S0 288.777 0 193.5 77.215 21 172.484 21 345 98.223 345 193.5" fill="#D9E8FB"></path>
+                            <path d="M172.224 21c31.218 0 60.514 8.338 85.776 22.865-20.395-9.14-43-14.238-66.821-14.238C100.824 29.627 27.567 103 27.567 193.5c0 90.5 73.257 163.873 163.612 163.873 23.789 0 46.426-5.099 66.821-14.238C232.738 357.695 203.474 366 172.224 366 77.1 366.032 0 288.777 0 193.5S77.099 21 172.224 21"
+                            fill="#BFDAF9"></path>
+                            <path d="M61.358 160.294c5.257 45.382 66.892 75.54 137.66 67.37 70.769-8.17 123.876-51.58 118.624-96.963-5.251-45.377-66.888-75.537-137.66-67.365-70.765 8.172-123.877 51.581-118.624 96.958" fill="#2A3756"></path>
+                            <path d="M278.71 141.24c.478 4.12 4.207 7.078 8.334 6.604a7.52 7.52 0 00-1.729-14.938c-4.122.476-7.077 4.21-6.604 8.335M230.787 148.916a7.517 7.517 0 0014.932-1.73c-.473-4.123-4.212-7.081-8.333-6.607a7.516 7.516 0 00-6.6 8.337M242.763 130.542c.483 4.125 4.206 7.085 8.333 6.605a7.51 7.51 0 006.599-8.333 7.511 7.511 0 00-8.328-6.604c-4.126.476-7.078 4.208-6.604 8.332M261.55 127.383a7.518 7.518 0 1014.933-1.732c-.471-4.126-4.207-7.077-8.33-6.6-4.122.473-7.08 4.205-6.602 8.332M132.97 158.092c.482 4.123 4.214 7.083 8.334 6.607a7.52 7.52 0 006.603-8.333c-.478-4.125-4.206-7.083-8.33-6.605a7.52 7.52 0 00-6.607 8.33M85.052 165.766a7.507 7.507 0 008.329 6.6 7.505 7.505 0 006.597-8.328 7.512 7.512 0 00-8.325-6.607 7.51 7.51 0 00-6.601 8.335M97.027 147.394a7.517 7.517 0 008.33 6.604 7.514 7.514 0 006.604-8.333 7.52 7.52 0 00-8.325-6.605c-4.128.48-7.088 4.209-6.61 8.334M115.809 144.233a7.525 7.525 0 008.336 6.604 7.509 7.509 0 006.598-8.332c-.47-4.126-4.204-7.08-8.322-6.605-4.127.48-7.087 4.206-6.612 8.333"
+                            fill="#527BEF"></path>
+                            <path d="M72.35 171.418c-1.064-5.604-2.887-21.26 0-31.642 4.779-17.18 20.388-40.627 26.804-47.337-8.346 5.576-22.172 17.034-30.234 31.74-7.506 13.692-9.624 30.52-7.932 39.667 1.96 10.581 9.505 23.514 21.486 33.431 20.854 17.264 50.916 28.758 57.965 26.982.4-.101-63.799-30.178-68.089-52.84z"
+                            fill="#252848"></path>
+                </g>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown" id="features" data-toggle="dropdown" href="https://automation.app/features" aria-haspopup="true" aria-expanded="false">
+                    Features
+                    </a>
+                    <ul class="dropdown-menu my-drop-down row  flex-wrap justify-content-start align-items-center" aria-labelledby="features">
+                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                            <i class="fa fa-bolt" aria-hidden="true"></i>
+                            <a class="dropdown-link" href="https://automation.app/crm">
+                                <span class="navTitle">Automations</span>
+                                <span>Automate your business</span>
+                            </a>
+                        </li>
+                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <a class="dropdown-link" href="https://automation.app/order-overview">
+                                <span class="navTitle">Custom Overviews</span>
+                                <span>Process orders - your way</span>
+                            </a>
+                        </li>
+                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <a class="dropdown-link" href="https://automation.app/email-marketing-automation">
+                                <span class="navTitle">Customer CRM</span>
+                                <span>Understand customers</span>
+                            </a>
+                        </li>
+                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <a class="dropdown-link" href="https://automation.app/email-marketing-automation">
+                                <span class="navTitle">9 more reasons</span>
+                                <span>why you'll love Automation.app</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://automation.app/cases">Use cases</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://automation.app/pricing"
+                    >Pricing</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://automation.app/contact"
+                    >Contact</a
+                    >
+                </li>
+                <li class="nav-item d-block d-md-none">
+                    <a class="nav-link" href="https://automation.app/login">Sign in</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-inline d-none d-lg-block">
+            <a class="btn btn-outline-primary mr-3" href="https://automation.app/app/login">Sign in</a
+                >
+                <a class="btn btn-primary" href="https://automation.app/app/register"
+                >Get started</a
+                >
+        </div>
+        
+        
+    </nav>
+
+    <!-- Hero section -->
+        <section>
+      <div class="hero-sec">
+        <div class="hero-icons-wrapper container-xl">
+          <div class="row">
+                <div class="col-12">
+                <h4 class="hero-head">Level up your E-commerce Game</h4>
+                </div>
+                <div class="col-sm-4 col-xs-6 hero-icons-box">
+                <a href="#Automations" onClick="goToSection('Automations')">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <p>Automations</p>
+                </a>
+        </div>
+        <div class="col-sm-4 hero-icons-box">
+            <a href="#Orders" onClick="goToSection('Orders')">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p>Custom overviews</p>
+            </a>
+        </div>
+        <div class="col-sm-4 hero-icons-box">
+            <a href="#CRM" onClick="goToSection('CRM')">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <p>Customer CRM</p>
+            </a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- Tab 1 Automation -->
+        <section id="Automations" name="Automations">
+            <div class="container-xl">
+                <div class="row sec-tab  flex-column-reverse justify-content-between flex-lg-row">
+                    <div class="col-md-12 col-lg-6 col-xl-5">
+                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                            <div class="tab-left-top-sec ">
+                                <h3>
+                                    <i class="fa fa-bolt" aria-hidden="true "></i> Tailor E-commerce processes
+                                </h3>
+                                <p>
+                                    <strong>Automate</strong> communication, deliver relevant messages using purchase information, lifecycle stage, and more. Works well for both marketing automation and business process automation.
+                                </p>
+                            </div>
+                            <div class="tab-left-bottom-sec tab1 tab-active">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>1. Automate anything you need</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Create all kinds of automations - customer emails, internal reminders, synchronisation of data, supplier updates, order tagging or whatever flow you need.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab1">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>2.Build 100% tailored automations and flows</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Trigger automations when something changes or schedule it. Set delays as needed. Conditions limits when the automation happens. With custom automations you can do almost anything.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab1">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>3. Pick pre-defined automation recipes</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Use the pre-built recipes for quickly getting the baseline set for your automations. These best practise recipes include the automation setup and content. They will help you getting started quickly.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab1">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>4. Templates in your styling for PDF’s & email</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Select colors and define your style in the builder. The templates are used for the automation content. The template is for styling, mixed with the content in the automation you can create almost anything.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-7 justify-content-center align-items-end d-flex">
+                        <div class="right-side-image-tab">
+                            <img loading="lazy" id="tailorImg" src="assets/images/tab1/tailor1.png " alt=" " />
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Tab 1 Orders -->
+        <section id="Orders" name="Orders">
+            <div class="container-xl">
+                <div class="row sec-tab  flex-column-reverse flex-lg-row">
+                    <div class="col-md-12 col-lg-6 col-xl-5">
+                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                            <div class="tab-left-top-sec">
+                                <h3>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true "></i> Process orders, the way you should
+                                </h3>
+                                <p>
+                                    Enjoy a fast <strong>order control</strong> with your customised WooCommerce order sorting. Define views with sortable columns and see the orders you need with conditional sorting
+                                </p>
+                            </div>
+                            <div class="tab-left-bottom-sec tab2 tab-active">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>1. Handle orders faster with a customised flow</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        With Automation.app you’ll be more effective at handling orders. Lightning fast and customisable overviews with any order data in your overview, sorted the way you like it.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab2">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>2. Fully customised order view - define data columns</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Add multiple views to see the data you need for any task. Views let you see the order data you need without the need to access the order page. Allowing you to get a quick overview.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab2">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>3. Configure order segments and tag orders</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Create your own custom filters to show exact lists of orders. - Based on any data. Filters can be made with tags or based on any data, like checkout selects, specific products bought - endless possibilities.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab2">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>
+                                        4. Order view page - define which custom fields are shown
+                                    </h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Seeing exactly the data you need on your order page. With meta fields you can configure to show order data that is normally not showing. A simple view yet packed with customisable features.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
+                        <div class="right-side-image-tab">
+                            <img loading="lazy" id="orderImg" src="assets/images/tab2/order1.png " alt=" " />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 1 CRM -->
+        <section id="CRM" name="CRM">
+            <div class="container-xl">
+                <div class="row sec-tab  flex-column-reverse flex-lg-row">
+                    <div class="col-md-12 col-lg-6 col-xl-5 ">
+                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                            <div class="tab-left-top-sec">
+                                <h3>
+                                    <i class="fa fa-users" aria-hidden="true "></i>Understand customers
+                                </h3>
+                                <p>
+                                    A Simple customisable <strong>CRM</strong> that can be used to understand your customers. With Complete CRM profiles you can deep dive into specific customer experiences and data.
+                                </p>
+                            </div>
+                            <div class="tab-left-bottom-sec tab3 tab-active">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>1. Complete CRM profiles for every customer</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Automation.app let’s you explore customer behavior. With individual customer profiles, you can observe patterns in the customer journey - and enable personal communication.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab3">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>2. All your relevant ecommerce data combined</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Tags and segmentation filtering makes you able to understand customers. Dive in to see order data, spending patterns, products and automation activity combined in individual customer profiles.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab3">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>3. Customer database to access and enable data</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Explore the customer sessions and product interactions. Create a better customer journey when seeing the single customers actions in terms of order history, lifetime spend and contact details.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                            <div class="tab-left-bottom-sec tab3">
+                                <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                    <h4>4. Automate Segmentation and tagging</h4>
+                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                                </div>
+                                <div class="tab-answer-sec">
+                                    <p>
+                                        Segment by customer behaviour, geographic, demographic and more. Segmentation by any data - down to single product, revenue, orders, last order, location and use tags for segmentation.
+                                    </p>
+                                </div>
+                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
+                        <div class="right-side-image-tab">
+                            <img loading="lazy" src="assets/images/tab3/crm1.png " alt="" id="crmImg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner  -->
+        <section>
+            <div class="container py-10 py-md-10 mb-5 px-5">
+                <div class="row ">
+                    <div class="col-12">
+                        <h2 class="hed text-center">9 more reasons why customers love Automation.app</h2>
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Multi shop Integration</h4>
+                            <p>One backend for all your orders and clients all commerce data in one place</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-user-plus" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Detailed User Management</h4>
+                            <p>Create unlimited users and give them access to specific data based on automated conditions.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-smile-wink" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Blazing Fast Search</h4>
+                            <p>Search data in milliseconds. Fast and reliable ElasticSearch will show orders or clients on the fly.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-wifi" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Client Tracking</h4>
+                            <p>Track where customers first entered your site from - you’ll know if they came from Facebook or SEO.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Activity overview</h4>
+                            <p>In the activity overview you can follow all processes and automations performed at any time.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-cloud-download-alt" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Easy Installation</h4>
+                            <p>Install the plugin, enable access and use one of the pre-made recipes from our library. Simple & effective.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-shield-alt" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Safe & Reliable</h4>
+                            <p>Cloud hosted, reliable architecture with SSL running on Elastic Search.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>Careful Customer Support</h4>
+                            <p>Our support strives to increase your bottomline. We deliver customer success, with every support case.</p>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                        <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                        <div class="reasons-right-content">
+                            <h4>No-code E-commerce Automation</h4>
+                            <p>Fast installation using one script and support for dozens of platforms.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="py-md-6 bg-dark position-relative">
+            <svg class="footer_mascot d-none d-xl-block" viewBox="0 0 1129 1342 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink ">
+                <defs>
+                    <path d="M.213 291.43L1.712 4.06C22.016 3.21 41.263 1.9 58.996.21l7.782 284.07c-19.621
+                3.33-42.175 5.8-66.565 7.15z " id="a "></path>
+                </defs>
+                <g fill="none " fill-rule="evenodd ">
+                    <path d="M661.42 602.763c-19.51 40.8-119.83 213.027-154 196.697-34.154-16.33 36.901-202.555 56.41-243.36 19.5-40.81 57.17-63.438 84.12-50.555 26.95 12.885
+                32.99 56.406 13.47 97.218 " fill="#EBECED "></path>
+                    <path d="M1126.8 423.214c17.62 165.182-106.49 313.856-277.21 332.066-170.72 18.21-323.401-100.94-341.022-266.12C490.95 323.979 615.06 175.31 785.78 157.1c170.72-18.21 323.4 100.932 341.02
+                266.114 " fill="#FFF "></path>
+                    <path d="M895.65 365.999c-1.64.246-3.35.283-5.09.085-32.01-3.678-60.68-19.607-80.72-44.848-20.04-25.25-29.05-56.785-25.37-88.807L798.8 107.8c3.67-32.02 19.6-60.691 44.84-80.728 25.25-20.045 56.78-29.053 88.8-25.371
+                10.62 1.219 18.24 10.819 17.02 21.442-1.22 10.62-10.8 18.232-21.44 17.016-21.74-2.503-43.16 3.617-60.31 17.231-17.14 13.614-27.95 33.083-30.46 54.829L822.93 236.85c-2.5 21.751 3.62 43.167 17.23 60.32 13.61 17.132 33.08 27.953 54.82 30.453
+                10.63 1.218 18.25 10.82 17.03 21.441-1.03 8.89-7.92 15.673-16.36 16.935 " fill="#FFF "></path>
+                    <path d="M1001.67 393.447c-1 75.218-96.76 134.92-213.89 133.36-117.12-1.563-211.26-63.8-210.26-139.021 1.01-75.211 96.77-134.915 213.9-133.355 117.12
+                1.567 211.26 63.803 210.25 139.016 " fill="#2A3756 "></path>
+                    <path d="M649.25 386.576c-.08 5.961-4.97 10.729-10.94 10.653-5.97-.075-10.74-4.976-10.66-10.944.09-5.961 4.98-10.733 10.95-10.655 5.96.08 10.73 4.982 10.65 10.946M718.86 390.548c-.07
+                5.962-4.97 10.727-10.94 10.65a10.79 10.79 0 01-10.65-10.939c.08-5.961 4.98-10.736 10.94-10.657 5.96.081 10.73 4.977 10.65 10.946M699.07 366.038c-.09 5.968-4.98 10.738-10.95 10.657-5.96-.08-10.73-4.976-10.65-10.941.08-5.968 4.97-10.736 10.94-10.656
+                5.96.08 10.73 4.979 10.66 10.94M671.75 364.268c-.08 5.961-4.97 10.728-10.94 10.652-5.97-.082-10.73-4.982-10.65-10.946.07-5.966 4.98-10.731 10.94-10.651 5.96.076 10.73 4.979 10.65 10.945M859.99 389.385c-.08 5.963-4.98 10.734-10.95 10.66-5.96-.082-10.72-4.984-10.64-10.944.08-5.965
+                4.97-10.736 10.93-10.656 5.97.078 10.73 4.972 10.66 10.94M929.6 393.357c-.07 5.966-4.98 10.731-10.94 10.649-5.97-.077-10.73-4.974-10.65-10.937.08-5.965 4.98-10.74 10.94-10.66 5.97.082 10.73 4.986 10.65 10.948M909.8 368.851c-.08 5.963-4.98
+                10.735-10.95 10.656-5.96-.08-10.73-4.98-10.64-10.948.08-5.961 4.97-10.728 10.93-10.652 5.97.08 10.74 4.98 10.66 10.944M882.49 367.074c-.08 5.965-4.98 10.735-10.94 10.655-5.97-.076-10.74-4.982-10.65-10.945.07-5.965 4.98-10.731 10.93-10.654
+                5.97.081 10.74 4.977 10.66 10.944 " fill="#527BEF "></path>
+                    <path d="M864.88 683.3c-96.71-49.684-209.67-108.669-284.27-146.612 1.45-1.803 2.89-4.046 4.13-6.597 1.26-2.571 2.17-5.104 2.69-7.369 75.74 35.714 191.63 88.841 290.19 134.808-1.72
+                4.04-3.58 8.12-5.6 12.23-2.3 4.7-4.69 9.21-7.14 13.54 " fill="#1C263A "></path>
+                    <path d="M1011.01 738.89c-3.93 8.03-11.79 12.24-17.56 9.41-33.68-16.49-78.99-39.52-128.57-65 2.45-4.33 4.84-8.84 7.14-13.54 2.02-4.11 3.88-8.19 5.6-12.23 50.48
+                23.55 96.42 45.22 130.07 61.71 5.77 2.82 7.26 11.62 3.32 19.65 " fill="#EF5C00 "></path>
+                    <path d="M538.037 499.089c13.173 6.455 29.963 14.474 49.393 23.633-.08 6.346-3.69 11.834-6.82 13.966-19.16-9.744-35.792-18.099-48.962-24.551-4.51-2.207
+                1.878-15.254 6.389-13.048 " fill="#EDD600 "></path>
+                    <path d="M531.199 511.916c1.623.798 4.36-1.463 6.121-5.059 1.76-3.577 1.868-7.133.25-7.935-1.624-.79-4.365 1.471-6.126 5.066-1.756 3.587-1.872 7.139-.245 7.928 " fill="#CCB027
+                "></path>
+                    <path d="M888.56 662.64l-14.01-6.54c-2.56 10.36-6.95 18.08-12.55 25.72l13.75 7.07c6.28-6.82 10.42-16.11 12.81-26.25 " fill="#DDD322 "></path>
+                    <path d="M1036.93 605.226c-35.32 28.24-200.62 139.604-224.27 110.034-23.64-29.59 121.4-166.29 156.73-194.527
+                35.33-28.249 79.09-32.22 97.74-8.89 18.65 23.334 5.13 65.142-30.2 93.383 " fill="#EBECED "></path>
+                    <path d="M462.523 1039.66c-38.268 8.13-97.554 13.73-164.173 14.47-63.945.71-121.234-3.23-159.726-9.99l-10.246 259.39c.242 22.05 78.827 39.06
+                175.525 38 96.705-1.07 174.891-19.81 174.65-41.87l-16.03-260 " fill="#2A3756 "></path>
+                    <path d="M143.841 941.59l-5.217 102.55c38.492 6.76 95.781 10.7 159.726 9.99 66.619-.74 125.905-6.34 164.173-14.47l-7.408-101.5-311.274 3.43 " fill="#EF5C00
+                "></path>
+                    <g transform="translate(337 1049) ">
+                        <mask id="b " fill="#fff ">
+                            <use xlink:href="#a "></use>
+                        </mask>
+                        <path fill="#404B67 " mask="url(#b) " d="M.213 291.43h66.565V.21H.213z "></path>
+                    </g>
+                    <path d="M338.712 1053.06l.336-64.37c19.74-.78 38.334-2.11 55.183-3.88l1.765
+                64.4c-17.733 1.69-36.98 3-57.284 3.85 " fill="#F16D1A "></path>
+                    <path d="M598.53 946.1c.41 37.66-133.094 69.65-298.197 71.47C135.23 1019.39 1.063 990.35.642 952.69c-.413-37.65 133.089-69.66 298.184-71.47 165.104-1.83 299.284 27.23 299.705 64.88
+                " fill="#2A3756 "></path>
+                    <path d="M454.266 947.69c.156 14.45-68.965 26.94-154.397 27.89-85.424.94-154.813-10.02-154.972-24.47-.156-14.47 68.974-26.96 154.393-27.9 85.435-.94 154.813 10.02 154.976 24.48 " fill="#1E1E1E "></path>
+                    <path d="M454.266 947.69c.156
+                14.45-68.965 26.94-154.397 27.89-85.424.94-154.813-10.02-154.972-24.47-.156-14.47 68.974-26.96 154.393-27.9 85.435-.94 154.813 10.02 154.976 24.48 " fill="#1C263A "></path>
+                    <path d="M393.363 969.21c6.694-.94 12.949-1.97 18.718-3.06 15.576-89.21
+                42.699-258.6 51.374-299.8 6.752-32.097-11.887-72.668-43.994-79.428-32.094-6.75-65.498 22.875-72.255 54.97-9.649 45.858-16.174 255.968-25.224 333.168 6.862-.24 13.569-.56 20.106-.94 7.306-34.79 60.994-66.14 51.275-4.91M257.227 969.94c.411 1.78.695
+                3.47.921 5.12 6.48.23 13.128.4 19.923.49-10.872-72.35-22.095-290.97-32.918-337.678-7.402-31.956-41.394-60.9-73.349-53.498-31.965 7.402-49.776 48.336-42.378 80.296 9.692 41.86 41.469 216.8 58.692 304.07 5.785.94 12.031 1.82 18.71 2.6-10.298-54.76
+                42.397-35.95 50.399-1.4 " fill="#FFF "></path>
+                    <path d="M408.577 638.68c-18.473-3.881-37.737 13.4-43.115 38.96-7.297 34.7-16.068 261.69-23.374 296.48 18.796-1.12 36.132-2.79 51.275-4.91 9.719-61.23 32.387-246.17 38.979-277.5 5.458-25.93-5.295-49.143-23.765-53.03M227.632
+                673.98c-5.984-25.819-25.517-42.335-43.898-38.077-18.392 4.253-28.585 28.057-22.698 53.497 7.451 32.15 35.494 227.18 45.792 281.94 15.183 1.77 32.544 3.04 51.32 3.72-.226-1.65-.51-3.34-.921-5.12-8.002-34.55-21.607-261.41-29.595-295.96
+                " fill="#FCCFB2 "></path>
+                    <path fill="#EDD600 " d="M298.398 605.771l7.772-43.586 43.53-10.164-43.53-10.162-7.772-43.587-7.775 43.587-43.531 10.162 43.531 10.164 7.775 43.586M270.928 450.604l6.572-36.847 36.8-8.591-36.8-8.594-6.572-36.847-6.574 36.847-36.8
+                8.594 36.8 8.591 6.574 36.847M369.075 514.566l5.609-31.462 31.421-7.334-31.421-7.335-5.609-31.462-5.614 31.462-31.42 7.335 31.42 7.334 5.614 31.462 "></path>
+                </g>
+            </svg>
+            <div class="container">
+                <div class="row justify-content-center py-5">
+                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                        <span class="badge badge-pill badge-secondary mb-5">
+              <span class="h6 text-uppercase">No credit card required</span>
+                        </span>
+                        <h1 class="display-6 text-white mb-3">Get started today</h1>
+                        <p class="font-size-lg text-muted mb-5">
+                            Start growing your business with effortless automation.
+                        </p>
+                        <a href="https://automation.app/app/register " class="btn btn-lg btn-success">Try it free</a
+            >
+          </div>
+        </div>
+            </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/tabs.js "></script>
+    <script src="assets/js/frontend.js "></script>
+    <!-- End -->
+  </body>
+</html>
