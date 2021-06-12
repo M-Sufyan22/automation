@@ -12,14 +12,13 @@
     <link rel="icon" type="image/png" sizes="96x96" href="https://automation.app/img/favicon/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://automation.app/img/favicon/favicon-16x16.png" />
     <!-- styles -->
-    <link rel="stylesheet" href="assets/css/app.css" />
-    <link rel="stylesheet" href="assets/css/css.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="general-layout">
+<body>
 
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light" id="header">
@@ -39,38 +38,38 @@
                 </g>
             </svg>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" id="nav-toggler-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navBars">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" id="features" data-toggle="dropdown" href="https://automation.app/features" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown" id="dropDownLink" data-toggle="dropdown" href="" aria-haspopup="true" aria-expanded="false">
                     Features
                     </a>
-                    <ul class="dropdown-menu my-drop-down row  flex-wrap justify-content-start align-items-center" aria-labelledby="features">
-                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                    <ul class="my-drop-down row  flex-wrap justify-content-start align-items-center" aria-labelledby="features">
+                        <li class="col-md-6 col-sm-12 my-nav-item">
                             <i class="fa fa-bolt" aria-hidden="true"></i>
                             <a class="dropdown-link" href="https://automation.app/crm">
                                 <span class="navTitle">Automations</span>
                                 <span>Automate your business</span>
                             </a>
                         </li>
-                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                        <li class="col-md-6 col-sm-12 my-nav-item">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <a class="dropdown-link" href="https://automation.app/order-overview">
                                 <span class="navTitle">Custom Overviews</span>
                                 <span>Process orders - your way</span>
                             </a>
                         </li>
-                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                        <li class="col-md-6 col-sm-12 my-nav-item">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
                             <a class="dropdown-link" href="https://automation.app/email-marketing-automation">
                                 <span class="navTitle">Customer CRM</span>
                                 <span>Understand customers</span>
                             </a>
                         </li>
-                        <li class="col-sm-6 col-xs-12 my-nav-item">
+                        <li class="col-md-6 col-sm-12 my-nav-item">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <a class="dropdown-link" href="https://automation.app/email-marketing-automation">
                                 <span class="navTitle">9 more reasons</span>
@@ -99,436 +98,431 @@
             </ul>
         </div>
         <div class="form-inline d-none d-lg-block">
-            <a class="btn btn-outline-primary mr-3" href="https://automation.app/app/login">Sign in</a
-                >
-                <a class="btn btn-primary" href="https://automation.app/app/register"
-                >Get started</a
-                >
+            <a class="btn btn-outline-primary mr-3" href="https://automation.app/app/login">Sign in</a>
+            <a class="btn btn-primary" href="https://automation.app/app/register">Get started</a>
         </div>
-        
-        
     </nav>
 
     <!-- Hero section -->
-        <section>
-      <div class="hero-sec">
-        <div class="hero-icons-wrapper container-xl">
-          <div class="row">
-                <div class="col-12">
-                <h4 class="hero-head">Level up your E-commerce Game</h4>
-                </div>
-                <div class="col-sm-4 col-xs-6 hero-icons-box">
-                <a href="#Automations" onClick="goToSection('Automations')">
-                    <i class="fa fa-bolt" aria-hidden="true"></i>
-                    <p>Automations</p>
-                </a>
-        </div>
-        <div class="col-sm-4 hero-icons-box">
-            <a href="#Orders" onClick="goToSection('Orders')">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <p>Custom overviews</p>
-            </a>
-        </div>
-        <div class="col-sm-4 hero-icons-box">
-            <a href="#CRM" onClick="goToSection('CRM')">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <p>Customer CRM</p>
-            </a>
-        </div>
-        </div>
-        </div>
-        </div>
-        </section>
-
-        <!-- Tab 1 Automation -->
-        <section id="Automations" name="Automations">
-            <div class="container-xl">
-                <div class="row sec-tab  flex-column-reverse justify-content-between flex-lg-row">
-                    <div class="col-md-12 col-lg-6 col-xl-5">
-                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
-                            <div class="tab-left-top-sec ">
-                                <h3>
-                                    <i class="fa fa-bolt" aria-hidden="true "></i> Tailor E-commerce processes
-                                </h3>
-                                <p>
-                                    <strong>Automate</strong> communication, deliver relevant messages using purchase information, lifecycle stage, and more. Works well for both marketing automation and business process automation.
-                                </p>
-                            </div>
-                            <div class="tab-left-bottom-sec tab1 tab-active">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>1. Automate anything you need</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Create all kinds of automations - customer emails, internal reminders, synchronisation of data, supplier updates, order tagging or whatever flow you need.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab1">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>2.Build 100% tailored automations and flows</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Trigger automations when something changes or schedule it. Set delays as needed. Conditions limits when the automation happens. With custom automations you can do almost anything.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab1">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>3. Pick pre-defined automation recipes</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Use the pre-built recipes for quickly getting the baseline set for your automations. These best practise recipes include the automation setup and content. They will help you getting started quickly.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab1">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>4. Templates in your styling for PDF’s & email</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Select colors and define your style in the builder. The templates are used for the automation content. The template is for styling, mixed with the content in the automation you can create almost anything.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-7 justify-content-center align-items-end d-flex">
-                        <div class="right-side-image-tab">
-                            <img loading="lazy" id="tailorImg" src="assets/images/tab1/tailor1.png " alt=" " />
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Tab 1 Orders -->
-        <section id="Orders" name="Orders">
-            <div class="container-xl">
-                <div class="row sec-tab  flex-column-reverse flex-lg-row">
-                    <div class="col-md-12 col-lg-6 col-xl-5">
-                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
-                            <div class="tab-left-top-sec">
-                                <h3>
-                                    <i class="fa fa-shopping-cart" aria-hidden="true "></i> Process orders, the way you should
-                                </h3>
-                                <p>
-                                    Enjoy a fast <strong>order control</strong> with your customised WooCommerce order sorting. Define views with sortable columns and see the orders you need with conditional sorting
-                                </p>
-                            </div>
-                            <div class="tab-left-bottom-sec tab2 tab-active">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>1. Handle orders faster with a customised flow</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        With Automation.app you’ll be more effective at handling orders. Lightning fast and customisable overviews with any order data in your overview, sorted the way you like it.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab2">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>2. Fully customised order view - define data columns</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Add multiple views to see the data you need for any task. Views let you see the order data you need without the need to access the order page. Allowing you to get a quick overview.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab2">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>3. Configure order segments and tag orders</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Create your own custom filters to show exact lists of orders. - Based on any data. Filters can be made with tags or based on any data, like checkout selects, specific products bought - endless possibilities.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab2">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>
-                                        4. Order view page - define which custom fields are shown
-                                    </h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Seeing exactly the data you need on your order page. With meta fields you can configure to show order data that is normally not showing. A simple view yet packed with customisable features.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
-                        <div class="right-side-image-tab">
-                            <img loading="lazy" id="orderImg" src="assets/images/tab2/order1.png " alt=" " />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab 1 CRM -->
-        <section id="CRM" name="CRM">
-            <div class="container-xl">
-                <div class="row sec-tab  flex-column-reverse flex-lg-row">
-                    <div class="col-md-12 col-lg-6 col-xl-5 ">
-                        <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
-                            <div class="tab-left-top-sec">
-                                <h3>
-                                    <i class="fa fa-users" aria-hidden="true "></i>Understand customers
-                                </h3>
-                                <p>
-                                    A Simple customisable <strong>CRM</strong> that can be used to understand your customers. With Complete CRM profiles you can deep dive into specific customer experiences and data.
-                                </p>
-                            </div>
-                            <div class="tab-left-bottom-sec tab3 tab-active">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>1. Complete CRM profiles for every customer</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Automation.app let’s you explore customer behavior. With individual customer profiles, you can observe patterns in the customer journey - and enable personal communication.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab3">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>2. All your relevant ecommerce data combined</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Tags and segmentation filtering makes you able to understand customers. Dive in to see order data, spending patterns, products and automation activity combined in individual customer profiles.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab3">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>3. Customer database to access and enable data</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Explore the customer sessions and product interactions. Create a better customer journey when seeing the single customers actions in terms of order history, lifetime spend and contact details.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                            <div class="tab-left-bottom-sec tab3">
-                                <div class="
-                    tab-heading-no
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  ">
-                                    <h4>4. Automate Segmentation and tagging</h4>
-                                    <i class="fa fa-angle-down dn" aria-hidden="true "></i>
-                                    <i class="fa fa-angle-up up" aria-hidden="true "></i>
-                                </div>
-                                <div class="tab-answer-sec">
-                                    <p>
-                                        Segment by customer behaviour, geographic, demographic and more. Segmentation by any data - down to single product, revenue, orders, last order, location and use tags for segmentation.
-                                    </p>
-                                </div>
-                                <img class="tab-asign-arrow" src="assets/images/arm.svg " />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
-                        <div class="right-side-image-tab">
-                            <img loading="lazy" src="assets/images/tab3/crm1.png " alt="" id="crmImg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Banner  -->
-        <section>
-            <div class="container py-10 py-md-10 mb-5 px-5">
-                <div class="row ">
+    <section>
+        <div class="hero-sec">
+            <div class="hero-icons-wrapper container-xl">
+                <div class="row d-flex">
                     <div class="col-12">
-                        <h2 class="hed text-center">9 more reasons why customers love Automation.app</h2>
+                        <h4 class="hero-head">Level up your E-commerce Game</h4>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
-
-                        <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Multi shop Integration</h4>
-                            <p>One backend for all your orders and clients all commerce data in one place</p>
-                        </div>
-
+                    <div class="col-sm-4 col-xs-12 hero-icons-box">
+                        <a href="#Automations" onClick="goToSection('Automations')">
+                            <i class="fa fa-bolt" aria-hidden="true"></i>
+                            <p>Automations</p>
+                        </a>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
-
-                        <div class="reasons-left-icon"><i class="fa fa-user-plus" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Detailed User Management</h4>
-                            <p>Create unlimited users and give them access to specific data based on automated conditions.</p>
-                        </div>
-
+                    <div class="col-sm-4 col-xs-12 hero-icons-box">
+                        <a href="#Orders" onClick="goToSection('Orders')">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>Custom overviews</p>
+                        </a>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
-
-                        <div class="reasons-left-icon"><i class="fa fa-smile-wink" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Blazing Fast Search</h4>
-                            <p>Search data in milliseconds. Fast and reliable ElasticSearch will show orders or clients on the fly.</p>
-                        </div>
-
+                    <div class="col-sm-4 col-xs-12 hero-icons-box">
+                        <a href="#CRM" onClick="goToSection('CRM')">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <p>Customer CRM</p>
+                        </a>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="reasons-left-icon"><i class="fa fa-wifi" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Client Tracking</h4>
-                            <p>Track where customers first entered your site from - you’ll know if they came from Facebook or SEO.</p>
+    <!-- Tab 1 Automation -->
+    <section id="Automations" name="Automations">
+        <div class="container-xl">
+            <div class="row sec-tab  flex-column-reverse justify-content-between flex-lg-row">
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                        <div class="tab-left-top-sec ">
+                            <h3>
+                                <i class="fa fa-bolt" aria-hidden="true "></i> Tailor E-commerce processes
+                            </h3>
+                            <p>
+                                <strong>Automate</strong> communication, deliver relevant messages using purchase information, lifecycle stage, and more. Works well for both marketing automation and business process automation.
+                            </p>
                         </div>
-
+                        <div class="tab-left-bottom-sec tab1 tab-active">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>1. Automate anything you need</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Create all kinds of automations - customer emails, internal reminders, synchronisation of data, supplier updates, order tagging or whatever flow you need.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab1">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>2.Build 100% tailored automations and flows</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Trigger automations when something changes or schedule it. Set delays as needed. Conditions limits when the automation happens. With custom automations you can do almost anything.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab1">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>3. Pick pre-defined automation recipes</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Use the pre-built recipes for quickly getting the baseline set for your automations. These best practise recipes include the automation setup and content. They will help you getting started quickly.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab1">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>4. Templates in your styling for PDF’s & email</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Select colors and define your style in the builder. The templates are used for the automation content. The template is for styling, mixed with the content in the automation you can create almost anything.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
-
-                        <div class="reasons-left-icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Activity overview</h4>
-                            <p>In the activity overview you can follow all processes and automations performed at any time.</p>
-                        </div>
-
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-7 justify-content-center align-items-end d-flex">
+                    <div class="right-side-image-tab">
+                        <img loading="lazy" id="tailorImg" src="assets/images/tab1/tailor1.png " alt=" " />
+                        <!-- </div> -->
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+                </div>
+            </div>
+    </section>
 
-                        <div class="reasons-left-icon"><i class="fa fa-cloud-download-alt" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Easy Installation</h4>
-                            <p>Install the plugin, enable access and use one of the pre-made recipes from our library. Simple & effective.</p>
+    <!-- Tab 1 Orders -->
+    <section id="Orders" name="Orders">
+        <div class="container-xl">
+            <div class="row sec-tab  flex-column-reverse flex-lg-row">
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                        <div class="tab-left-top-sec">
+                            <h3>
+                                <i class="fa fa-shopping-cart" aria-hidden="true "></i> Process orders, the way you should
+                            </h3>
+                            <p>
+                                Enjoy a fast <strong>order control</strong> with your customised WooCommerce order sorting. Define views with sortable columns and see the orders you need with conditional sorting
+                            </p>
                         </div>
-
+                        <div class="tab-left-bottom-sec tab2 tab-active">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>1. Handle orders faster with a customised flow</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    With Automation.app you’ll be more effective at handling orders. Lightning fast and customisable overviews with any order data in your overview, sorted the way you like it.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab2">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>2. Fully customised order view - define data columns</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Add multiple views to see the data you need for any task. Views let you see the order data you need without the need to access the order page. Allowing you to get a quick overview.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab2">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>3. Configure order segments and tag orders</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Create your own custom filters to show exact lists of orders. - Based on any data. Filters can be made with tags or based on any data, like checkout selects, specific products bought - endless possibilities.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab2">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>
+                                    4. Order view page - define which custom fields are shown
+                                </h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Seeing exactly the data you need on your order page. With meta fields you can configure to show order data that is normally not showing. A simple view yet packed with customisable features.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
-
-                        <div class="reasons-left-icon"><i class="fa fa-shield-alt" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Safe & Reliable</h4>
-                            <p>Cloud hosted, reliable architecture with SSL running on Elastic Search.</p>
-                        </div>
-
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
+                    <div class="right-side-image-tab">
+                        <img loading="lazy" id="orderImg" src="assets/images/tab2/order1.png " alt=" " />
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="reasons-left-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>Careful Customer Support</h4>
-                            <p>Our support strives to increase your bottomline. We deliver customer success, with every support case.</p>
+    <!-- Tab 1 CRM -->
+    <section id="CRM" name="CRM">
+        <div class="container-xl">
+            <div class="row sec-tab  flex-column-reverse flex-lg-row">
+                <div class="col-md-12 col-lg-6 col-xl-5 ">
+                    <div class="tab-left-side-wrapper d-flex flex-column justify-content-end">
+                        <div class="tab-left-top-sec">
+                            <h3>
+                                <i class="fa fa-users" aria-hidden="true "></i>Understand customers
+                            </h3>
+                            <p>
+                                A Simple customisable <strong>CRM</strong> that can be used to understand your customers. With Complete CRM profiles you can deep dive into specific customer experiences and data.
+                            </p>
                         </div>
-
+                        <div class="tab-left-bottom-sec tab3 tab-active">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>1. Complete CRM profiles for every customer</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Automation.app let’s you explore customer behavior. With individual customer profiles, you can observe patterns in the customer journey - and enable personal communication.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab3">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>2. All your relevant ecommerce data combined</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Tags and segmentation filtering makes you able to understand customers. Dive in to see order data, spending patterns, products and automation activity combined in individual customer profiles.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab3">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>3. Customer database to access and enable data</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Explore the customer sessions and product interactions. Create a better customer journey when seeing the single customers actions in terms of order history, lifetime spend and contact details.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
+                        <div class="tab-left-bottom-sec tab3">
+                            <div class="
+                    tab-heading-no
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  ">
+                                <h4>4. Automate Segmentation and tagging</h4>
+                                <i class="fa fa-angle-down dn" aria-hidden="true "></i>
+                                <i class="fa fa-angle-up up" aria-hidden="true "></i>
+                            </div>
+                            <div class="tab-answer-sec">
+                                <p>
+                                    Segment by customer behaviour, geographic, demographic and more. Segmentation by any data - down to single product, revenue, orders, last order, location and use tags for segmentation.
+                                </p>
+                            </div>
+                            <img class="tab-asign-arrow" src="assets/images/arm.svg " />
+                        </div>
                     </div>
-                    <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-7  justify-content-center align-items-lg-end d-flex">
+                    <div class="right-side-image-tab">
+                        <img loading="lazy" src="assets/images/tab3/crm1.png " alt="" id="crmImg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
-                        <div class="reasons-right-content">
-                            <h4>No-code E-commerce Automation</h4>
-                            <p>Fast installation using one script and support for dozens of platforms.</p>
-                        </div>
+    <!-- Banner  -->
+    <section>
+        <div class="container py-10 py-md-10 mb-5 px-4 px-sm-0">
+            <div class="row ">
+                <div class="col-12">
+                    <h2 class="hed text-center">9 more reasons why customers love Automation.app</h2>
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
 
+                    <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Multi shop Integration</h4>
+                        <p>One backend for all your orders and clients all commerce data in one place</p>
                     </div>
 
                 </div>
-            </div>
-        </section>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
 
-        <!-- Footer -->
-        <section class="py-md-6 bg-dark position-relative">
-            <svg class="footer_mascot d-none d-xl-block" viewBox="0 0 1129 1342 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink ">
+                    <div class="reasons-left-icon"><i class="fa fa-user-plus" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Detailed User Management</h4>
+                        <p>Create unlimited users and give them access to specific data based on automated conditions.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-smile-wink" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Blazing Fast Search</h4>
+                        <p>Search data in milliseconds. Fast and reliable ElasticSearch will show orders or clients on the fly.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-wifi" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Client Tracking</h4>
+                        <p>Track where customers first entered your site from - you’ll know if they came from Facebook or SEO.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Activity overview</h4>
+                        <p>In the activity overview you can follow all processes and automations performed at any time.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-cloud-download-alt" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Easy Installation</h4>
+                        <p>Install the plugin, enable access and use one of the pre-made recipes from our library. Simple & effective.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-shield-alt" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Safe & Reliable</h4>
+                        <p>Cloud hosted, reliable architecture with SSL running on Elastic Search.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>Careful Customer Support</h4>
+                        <p>Our support strives to increase your bottomline. We deliver customer success, with every support case.</p>
+                    </div>
+
+                </div>
+                <div class="mt-5 col-md-4 col-sm-6 col-xs-6 reasons-column d-flex justify-content-between">
+
+                    <div class="reasons-left-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                    <div class="reasons-right-content">
+                        <h4>No-code E-commerce Automation</h4>
+                        <p>Fast installation using one script and support for dozens of platforms.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="py-md-6 bg-dark position-relative">
+        <svg class="footer_mascot d-none d-xl-block" viewBox="0 0 1129 1342 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink ">
                 <defs>
                     <path d="M.213 291.43L1.712 4.06C22.016 3.21 41.263 1.9 58.996.21l7.782 284.07c-19.621
                 3.33-42.175 5.8-66.565 7.15z " id="a "></path>
@@ -588,17 +582,17 @@
                 8.594 36.8 8.591 6.574 36.847M369.075 514.566l5.609-31.462 31.421-7.334-31.421-7.335-5.609-31.462-5.614 31.462-31.42 7.335 31.42 7.334 5.614 31.462 "></path>
                 </g>
             </svg>
-            <div class="container">
-                <div class="row justify-content-center py-5">
-                    <div class="col-12 col-md-10 col-lg-8 text-center">
-                        <span class="badge badge-pill badge-secondary mb-5">
+        <div class="container">
+            <div class="row justify-content-center py-5">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <span class="badge badge-pill badge-secondary mb-5">
               <span class="h6 text-uppercase">No credit card required</span>
-                        </span>
-                        <h1 class="display-6 text-white mb-3">Get started today</h1>
-                        <p class="font-size-lg text-muted mb-5">
-                            Start growing your business with effortless automation.
-                        </p>
-                        <a href="https://automation.app/app/register " class="btn btn-lg btn-success">Try it free</a
+                    </span>
+                    <h1 class="display-6 text-white mb-3">Get started today</h1>
+                    <p class="font-size-lg text-muted mb-5">
+                        Start growing your business with effortless automation.
+                    </p>
+                    <a href="https://automation.app/app/register " class="btn btn-lg btn-success">Try it free</a
             >
           </div>
         </div>
@@ -607,7 +601,17 @@
 
     <!-- Scripts -->
     <script src="assets/js/tabs.js "></script>
-    <script src="assets/js/frontend.js "></script>
+
     <!-- End -->
+    <script>
+        let NavTogglerBtn = document.getElementById("nav-toggler-btn");
+        let navBars = document.getElementById("navBars");
+        let dropDownLink = document.getElementById("dropDownLink");
+        let dropDownUl = document.querySelector(".my-drop-down");
+        NavTogglerBtn.addEventListener('click', ()=>{
+            navBars.classList.toggle('collapse');
+            dropDownUl.classList.remove('show-my-dropdown-menu')
+        });
+    </script>
   </body>
 </html>
